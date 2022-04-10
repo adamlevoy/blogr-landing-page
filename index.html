@@ -21,8 +21,8 @@
 	</head>
 	<body>
 		<header>
-			<!-- mobile menu -->
-			<div id="mobile-menu" hidden>
+			<!-- mobile menu start -->
+			<nav id="mobile-menu" hidden>
 				<div class="mobile-menu" aria-label="mobile menu" role="menu">
 					<div class="mobile-menu-item">
 						<span>Product</span>
@@ -32,7 +32,7 @@
 							alt=""
 						/>
 					</div>
-					<div id="sub-menu" hidden>
+					<nav id="sub-menu" hidden>
 						<div class="sub-menu">
 							<a href="#">Overview</a>
 							<a href="#">Pricing</a>
@@ -40,7 +40,7 @@
 							<a href="#">Features</a>
 							<a href="#">Integrations</a>
 						</div>
-					</div>
+					</nav>
 					<div class="mobile-menu-item">
 						<span>Company</span>
 						<img
@@ -49,13 +49,13 @@
 							alt=""
 						/>
 					</div>
-					<div id="sub-menu" hidden>
+					<nav id="sub-menu" hidden>
 						<div class="sub-menu">
 							<a href="#">Team</a>
 							<a href="#">Blog</a>
 							<a href="#">Careers</a>
 						</div>
-					</div>
+					</nav>
 					<div class="mobile-menu-item">
 						<span>Connect</span>
 						<img
@@ -64,38 +64,71 @@
 							alt=""
 						/>
 					</div>
-					<div id="sub-menu" hidden>
+					<nav id="sub-menu" hidden>
 						<div class="sub-menu">
 							<a href="#">Contact</a>
 							<a href="#">Newsletter</a>
 							<a href="#">LinkedIn</a>
 						</div>
-					</div>
+					</nav>
 					<hr />
 					<a>Login</a>
 					<button class="btn-gradient">Sign Up</button>
 				</div>
-			</div>
-
+			</nav>
+			<!-- mobile menu end -->
 			<div class="wrapper">
 				<div class="navbar">
 					<div>
 						<img class="logo" src="./images/logo.svg" alt="logo" />
 					</div>
-					<div id="open">
-						<img
-							src="./images/icon-hamburger.svg"
-							role="button"
-							alt=""
-						/>
-					</div>
-					<div id="close" hidden>
-						<img
-							id="close"
-							src="./images/icon-close.svg"
-							alt=""
-							role="button"
-						/>
+					<!-- desktop nav start -->
+					<nav class="desktop-nav">
+						<div>
+							<div class="nav-item">
+								<span>Product</span
+								><img
+									src="./images/icon-arrow-light.svg"
+									alt=""
+								/>
+							</div>
+							<div class="nav-item">
+								<span>Company</span
+								><img
+									src="./images/icon-arrow-light.svg"
+									alt=""
+								/>
+							</div>
+							<div class="nav-item">
+								<span>Connect</span
+								><img
+									src="./images/icon-arrow-light.svg"
+									alt=""
+								/>
+							</div>
+						</div>
+						<div>
+							<a href="#">Login</a>
+							<button class="btn btn-primary">Sign Up</button>
+						</div>
+					</nav>
+					<!-- desktop nav end -->
+					<div id="mobile-menu-toggle">
+						<div id="open">
+							<img
+								src="./images/icon-hamburger.svg"
+								role="button"
+								alt=""
+							/>
+						</div>
+						<div id="close" hidden>
+							<img
+								id="close"
+								src="./images/icon-close.svg"
+								alt=""
+								role="button"
+							/>
+						</div>
 					</div>
 				</div>
 				<div class="header-content">
@@ -110,43 +143,59 @@
 						online brand
 					</p>
 					<div class="btn-container">
-						<button class="btn-primary">Start for Free</button>
-						<button class="btn-outline">Learn More</button>
+						<button class="btn btn-primary">Start for Free</button>
+						<button class="btn btn-outline">Learn More</button>
 					</div>
 				</div>
 			</div>
 		</header>
 
+		<!-- designed for the future | start -->
 		<section class="designed-for-the-future">
-			<div class="wrapper">
-				<h2>Designed for the future</h2>
-				<img
-					src="./images/illustration-editor-mobile.svg"
-					alt="illustration-editor-mobile"
-				/>
-
-				<h2>
-					Introducing an <br class="mobile-break" />
-					extensible editor
-				</h2>
-				<p>
-					Blogr features an exceedingly intuitive interface which lets
-					you focus on one thing: creating content. The editor
-					supports management of multiple blogs and allows easy
-					manipulation of embeds such as images, videos, and Markdown.
-					Extensibility with plugins and themes provide easy ways to
-					add functionality or change the looks of a blog.
-				</p>
-
-				<h2>Robust content management</h2>
-				<p>
-					Flexible content management enables users to easily move
-					through posts. Increase the usability of your blog by adding
-					customized categories, sections, format, or flow. With this
-					functionality, you’re in full control.
-				</p>
+			<h2>Designed for the future</h2>
+			<div class="designed-container">
+				<div class="designed-img">
+					<img
+						src="./images/illustration-editor-mobile.svg"
+						alt="illustration-editor-mobile"
+						id="editor-mobile"
+					/>
+					<img
+						src="./images/illustration-editor-desktop.svg"
+						alt="illustration-editor-desktop"
+						id="editor-desktop"
+					/>
+				</div>
+				<div class="designed-content">
+					<div>
+						<h3>
+							Introducing an <br class="mobile-break" />
+							extensible editor
+						</h3>
+						<p>
+							Blogr features an exceedingly intuitive interface
+							which lets you focus on one thing: creating content.
+							The editor supports management of multiple blogs and
+							allows easy manipulation of embeds such as images,
+							videos, and Markdown. Extensibility with plugins and
+							themes provide easy ways to add functionality or
+							change the looks of a blog.
+						</p>
+					</div>
+					<div>
+						<h3>Robust content management</h3>
+						<p>
+							Flexible content management enables users to easily
+							move through posts. Increase the usability of your
+							blog by adding customized categories, sections,
+							format, or flow. With this functionality, you’re in
+							full control.
+						</p>
+					</div>
+				</div>
 			</div>
 		</section>
+		<!-- designed for the future | end -->
 
 		<section class="state-of-the-art">
 			<img
