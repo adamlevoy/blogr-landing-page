@@ -153,7 +153,7 @@ section .wrapper {
 	flex-direction: column;
 	gap: 2rem;
 	margin-bottom: 10rem;
-	padding-block: 2rem;
+	/* padding-block: 2rem; */
 }
 
 .state-of-the-art {
@@ -382,28 +382,26 @@ footer h4 {
 
 	.designed-for-the-future {
 		gap: 0;
-		padding-top: 10rem;
 		margin-bottom: 0;
+		overflow: hidden;
+	}
+
+	.designed-for-the-future h2 {
+		margin-bottom: -7rem;
 	}
 
 	.designed-container {
 		display: flex;
 		flex-direction: row-reverse;
-		height: 55vh;
-		margin-top: -10rem;
 	}
 
-	.designed-img {
-		/* padding-block: 2rem; */
-		height: 100%;
-		display: grid;
-		place-items: center;
+	.designed-container > * {
+		flex-basis: 0;
+		flex-grow: 1;
 	}
 
-	.designed-img img {
-		object-position: -80% center;
-		object-fit: none;
-		height: 100%;
+	#editor-desktop {
+		margin-right: -320px;
 	}
 
 	.designed-content {
@@ -528,6 +526,18 @@ footer h4 {
 	margin-top: 2rem;
 }
 
+.mt-24 {
+	margin-top: 6rem;
+}
+
+.mt-28 {
+	margin-top: 7rem;
+}
+
+.mt-32 {
+	margin-top: 8rem;
+}
+
 .px-8 {
 	padding-inline: var(--p-8);
 }
@@ -580,8 +590,16 @@ footer h4 {
 	gap: 2rem;
 }
 
+.gap-12 {
+	gap: 3rem;
+}
+
 .gap-16 {
 	gap: 4rem;
+}
+
+.gap-32 {
+	gap: 8rem;
 }
 
 .vh-55 {
