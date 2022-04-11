@@ -15,7 +15,6 @@
 	--clr-dark-gray: hsl(207, 13%, 34%);
 	--clr-black: hsl(240, 10%, 16%);
 
-	/* gradients */
 	--gradient-red: hsl(13, 100%, 72%), hsl(353, 100%, 62%);
 	--gradient-dark: hsl(237, 17%, 21%), hsl(237, 23%, 32%);
 
@@ -27,6 +26,15 @@
 	--footer-bg: var(--clr-black);
 	--bg-gradient-intro: var(--gradient-red);
 	--bg-gradient-body: var(--gradient-dark);
+
+	--p-1: 0.25rem;
+	--p-2: 0.5rem;
+	--p-3: 0.75rem;
+	--p-4: 1rem;
+	--p-8: 2rem;
+	--p-40: 10rem;
+
+	--max-w-lg: 32rem;
 }
 
 body {
@@ -34,6 +42,8 @@ body {
 	font-size: 1rem;
 	color: var(--body-clr);
 	line-height: 1.8;
+	max-width: 1440px;
+	margin-inline: auto;
 }
 
 header {
@@ -80,12 +90,9 @@ h2,
 h3 {
 	color: var(--heading-clr);
 	font-family: var(--font-family-overpass);
+	font-weight: bold;
 	line-height: 1.3;
 }
-
-/* img {
-	margin-inline: auto;
-} */
 
 .wrapper {
 	padding-inline: 2rem;
@@ -151,39 +158,40 @@ section .wrapper {
 
 .state-of-the-art {
 	position: relative;
-	display: grid;
-	place-items: center;
+	display: flex;
+	flex-direction: column;
 	background-image: url('./images/bg-pattern-circles.svg'),
-		linear-gradient(to bottom right, var(--bg-gradient-body));
+		linear-gradient(to right, var(--bg-gradient-body));
 	background-origin: border-box;
 	background-position: center;
-	background-size: cover;
+	/* background-size: cover; */
 	background-repeat: no-repeat;
 	background-attachment: fixed;
 	color: var(--clr-white);
 	border-top-right-radius: 6rem;
 	border-bottom-left-radius: 6rem;
-	height: min(65vh, 650px);
+	/* height: min(65vh, 650px); */
 }
 
-.state-of-the-art .wrapper {
+.state-of-the-art div {
 	position: absolute;
 	bottom: 1rem;
-	display: grid;
-	gap: 2rem;
 }
 
 .state-of-the-art h2 {
 	display: flex;
 	flex-direction: column;
 	color: var(--clr-white);
-	font-size: 2rem;
 	margin-top: 10rem;
 }
 
-.state-of-the-art img {
+.phones {
 	position: absolute;
 	top: -180px;
+}
+
+#laptop-desktop {
+	display: none;
 }
 
 footer {
@@ -381,7 +389,6 @@ footer h4 {
 	.designed-container {
 		display: flex;
 		flex-direction: row-reverse;
-		gap: 4rem;
 		height: 55vh;
 		margin-top: -10rem;
 	}
@@ -394,7 +401,7 @@ footer h4 {
 	}
 
 	.designed-img img {
-		object-position: -25% center;
+		object-position: -80% center;
 		object-fit: none;
 		height: 100%;
 	}
@@ -418,6 +425,53 @@ footer h4 {
 		display: none;
 	}
 
+	.state-of-the-art {
+		flex-direction: row;
+		background-position: -52% 80%;
+		background-attachment: initial;
+		/* max-height: 500px;
+		overflow: visible; */
+	}
+
+	.state-of-the-art > * {
+		flex-basis: 0;
+		flex-grow: 1;
+	}
+
+	.state-of-the-art div {
+		position: initial;
+		justify-content: center;
+		flex-basis: 0;
+		flex-grow: 1;
+		padding-left: 0;
+		padding-block: 7rem;
+		text-align: left;
+	}
+
+	.state-of-the-art h2 {
+		margin: 0;
+	}
+
+	.state-of-the-art p {
+		max-width: 32rem;
+	}
+
+	.phones {
+		top: -70px;
+		left: 100px;
+	}
+
+	#laptop-mobile {
+		display: none;
+	}
+
+	#laptop-desktop {
+		display: block;
+		object-fit: none;
+		object-position: 105%;
+		height: 100%;
+	}
+
 	footer .wrapper {
 		flex-direction: row;
 		justify-content: space-between;
@@ -430,4 +484,110 @@ footer h4 {
 	.footer img {
 		margin-inline: 0;
 	}
+}
+
+/* utilities */
+
+.flex {
+	display: flex;
+}
+
+.flex-col {
+	flex-direction: column;
+}
+
+.justify-center {
+	justify-content: center;
+}
+
+.items-center {
+	align-items: center;
+}
+
+.basis-0 {
+	flex-basis: 0;
+}
+
+.grow-1 {
+	flex-grow: 1;
+}
+
+.text-center {
+	text-align: center;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.mt-4 {
+	margin-top: 1rem;
+}
+
+.mt-8 {
+	margin-top: 2rem;
+}
+
+.px-8 {
+	padding-inline: var(--p-8);
+}
+
+.px-40 {
+	padding-inline: var(--p-40);
+}
+
+.py-4 {
+	padding-block: 1rem;
+}
+
+.py-8 {
+	padding-block: 2rem;
+}
+
+.py-12 {
+	padding-block: 3rem;
+}
+
+.py-16 {
+	padding-block: 4rem;
+}
+
+.py-32 {
+	padding-block: 8rem;
+}
+
+.py-64 {
+	padding-block: 16rem;
+}
+
+.pt-8 {
+	padding-top: 2rem;
+}
+
+.pr-40 {
+	padding-right: var(--p-40);
+}
+
+.max-w-lg {
+	max-width: var(--max-w-lg);
+}
+
+.gap-4 {
+	gap: 1rem;
+}
+
+.gap-8 {
+	gap: 2rem;
+}
+
+.gap-16 {
+	gap: 4rem;
+}
+
+.vh-55 {
+	height: 55vh;
+}
+
+.h-full {
+	height: 100%;
 }
