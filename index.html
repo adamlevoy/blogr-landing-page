@@ -32,7 +32,7 @@
 							alt=""
 						/>
 					</div>
-					<nav id="sub-menu" hidden>
+					<div id="sub-menu" class="w-full" hidden>
 						<div class="sub-menu">
 							<a href="#">Overview</a>
 							<a href="#">Pricing</a>
@@ -40,7 +40,7 @@
 							<a href="#">Features</a>
 							<a href="#">Integrations</a>
 						</div>
-					</nav>
+					</div>
 					<div class="mobile-menu-item">
 						<span>Company</span>
 						<img
@@ -49,13 +49,13 @@
 							alt=""
 						/>
 					</div>
-					<nav id="sub-menu" hidden>
+					<div id="sub-menu" class="w-full" hidden>
 						<div class="sub-menu">
 							<a href="#">Team</a>
 							<a href="#">Blog</a>
 							<a href="#">Careers</a>
 						</div>
-					</nav>
+					</div>
 					<div class="mobile-menu-item">
 						<span>Connect</span>
 						<img
@@ -64,13 +64,13 @@
 							alt=""
 						/>
 					</div>
-					<nav id="sub-menu" hidden>
+					<div id="sub-menu" class="w-full" hidden>
 						<div class="sub-menu">
 							<a href="#">Contact</a>
 							<a href="#">Newsletter</a>
 							<a href="#">LinkedIn</a>
 						</div>
-					</nav>
+					</div>
 					<hr />
 					<a>Login</a>
 					<button class="btn-gradient">Sign Up</button>
@@ -84,31 +84,97 @@
 					</div>
 					<!-- desktop nav start -->
 					<nav class="desktop-nav">
-						<div>
-							<div class="nav-item">
+						<div class="flex flex-wrap justify-center items-center">
+							<div
+								id="desktop-nav-item"
+								class="flex justify-center items-center relative"
+							>
 								<span>Product</span
 								><img
 									src="./images/icon-arrow-light.svg"
 									alt=""
 								/>
+								<div
+									id="desktop-sub-menu"
+									class="absolute -bottom-52 bg-white p-4 rounded"
+									hidden
+								>
+									<div class="grid text-left p-1 gap-1">
+										<a class="text-dark-gray" href="#"
+											>Overview</a
+										>
+										<a class="text-dark-gray" href="#"
+											>Pricing</a
+										>
+										<a class="text-dark-gray" href="#"
+											>Marketplace</a
+										>
+										<a class="text-dark-gray" href="#"
+											>Features</a
+										>
+										<a class="text-dark-gray" href="#"
+											>Integrations</a
+										>
+									</div>
+								</div>
 							</div>
-							<div class="nav-item">
+							<div
+								id="desktop-nav-item"
+								class="flex justify-center items-center relative"
+							>
 								<span>Company</span
 								><img
 									src="./images/icon-arrow-light.svg"
 									alt=""
 								/>
+								<div
+									id="desktop-sub-menu"
+									class="absolute -bottom-52 bg-white p-4 rounded"
+									hidden
+								>
+									<div class="grid text-left p-1 gap-1">
+										<a class="text-dark-gray" href="#"
+											>Team</a
+										>
+										<a class="text-dark-gray" href="#"
+											>Blog</a
+										>
+										<a class="text-dark-gray" href="#"
+											>Careers</a
+										>
+									</div>
+								</div>
 							</div>
-							<div class="nav-item">
+							<div
+								id="desktop-nav-item"
+								class="flex justify-center items-center relative"
+							>
 								<span>Connect</span
 								><img
 									src="./images/icon-arrow-light.svg"
 									alt=""
 								/>
+								<div
+									id="desktop-sub-menu"
+									class="absolute -bottom-52 bg-white p-4 rounded"
+									hidden
+								>
+									<div class="grid text-left p-1 gap-1">
+										<a class="text-dark-gray" href="#"
+											>Contact</a
+										>
+										<a class="text-dark-gray" href="#"
+											>Newsletter</a
+										>
+										<a class="text-dark-gray" href="#"
+											>LinkedIn</a
+										>
+									</div>
+								</div>
 							</div>
 						</div>
 						<div>
-							<a href="#">Login</a>
+							<a href="#" class="text-white">Login</a>
 							<button class="btn btn-primary">Sign Up</button>
 						</div>
 					</nav>
@@ -159,14 +225,11 @@
 					alt="illustration-editor-desktop"
 					id="editor-desktop"
 				/>
-				<!-- <div class="designed-img">
-					<img
-						src="./images/illustration-editor-mobile.svg"
-						alt="illustration-editor-mobile"
-						id="editor-mobile"
-					/>
-					
-				</div> -->
+				<img
+					src="./images/illustration-editor-mobile.svg"
+					alt="illustration-editor-mobile"
+					id="editor-mobile"
+				/>
 				<div class="designed-content">
 					<div>
 						<h3>
@@ -221,19 +284,17 @@
 		</section>
 		<!--state of the art | end  -->
 
-		<section class="flex vh-55 py-12">
-			<div class="basis-0 grow-1 h-full">
-				<img
-					src="./images/illustration-laptop-mobile.svg"
-					alt="latop mobile"
-					id="laptop-mobile"
-				/>
-				<img
-					src="./images/illustration-laptop-desktop.svg"
-					alt="latop desktop"
-					id="laptop-desktop"
-				/>
-			</div>
+		<section class="flex gap-4 py-24 overflow-hidden">
+			<img
+				src="./images/illustration-laptop-mobile.svg"
+				alt="latop mobile"
+				id="laptop-mobile"
+			/>
+			<img
+				src="./images/illustration-laptop-desktop.svg"
+				alt="latop desktop"
+				id="laptop-desktop"
+			/>
 			<div
 				class="text-left basis-0 grow-1 flex flex-col justify-center gap-16"
 			>
